@@ -128,7 +128,7 @@ const StyledAbout = styled.div`
 `;
 
 const About = () => {
-  const PDF_FILE_URL = 'http://localhost:5173/cv_muhammad_rafiq.pdf';
+  const PDF_FILE_URL = 'https://drive.google.com/file/d/1kBaCFdlpTNH4A2cq-9wevvVyMoc_ga0u/view?usp=sharing';
 
   const downloadFile = (url) => {
     const filename = url.split('/').pop();
