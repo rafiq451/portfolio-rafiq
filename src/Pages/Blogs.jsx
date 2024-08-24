@@ -50,7 +50,7 @@ const Blogs = () => {
     },
     {
       id: 4,
-      title: 'Bulan dan Tanggal si Anu ulang tahunnya',
+      title: 'Memahami Bahasa tubuh dengan kesepian',
       img: Gambar,
       date: '16 Agustus 2023',
       deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
