@@ -1,9 +1,8 @@
 import React from 'react';
 import Herro from '../components/Herro/Herro';
 import styled from 'styled-components';
-// import bgGaris from '../assets/garis.svg';
-// import bgGaris1 from '../assets/garis1.svg';
-import bgGaris2 from '../assets/garis2.png';
+import bgGaris from '../assets/garis.png';
+
 import About from './About';
 import Resume from './Resume';
 import Certificate from './Certificate';
@@ -23,7 +22,7 @@ const StyledHome = styled.div`
     height: 100%; // Agar background memenuhi area secara vertikal
     background-image: url(${(props) => props.$bgGaris});
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 2;
   }
 
   // Untuk menambah kesan layering
@@ -37,7 +36,7 @@ const Home = () => {
   return (
     <>
       <Herro />
-      <StyledHome $bgGaris={bgGaris2}>
+      <StyledHome $bgGaris={bgGaris}>
         <section className="bg-garis">
           <div className="content ">
             <About />
