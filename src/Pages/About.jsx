@@ -128,6 +128,17 @@ const StyledAbout = styled.div`
 `;
 
 const About = () => {
+  const PDF_FILE_URL = 'http://localhost:5173/cv_muhammad_rafiq.pdf';
+
+  const downloadFile = (url) => {
+    const filename = url.split('/').pop();
+    const aTag = document.createElement('a');
+    aTag.href = url;
+    aTag.setAttribute('download', filename);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
   return (
     <StyledAbout>
       <ContainerComponent>
@@ -165,7 +176,7 @@ const About = () => {
               </div>
             </section>
             <div className="mt-3">
-              <Button text="Download CV">
+              <Button text="Download CV" onClick={() => downloadFile(PDF_FILE_URL)}>
                 <FontAwesomeIcon icon={faDownload} />
               </Button>
             </div>

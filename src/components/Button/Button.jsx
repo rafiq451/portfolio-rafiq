@@ -40,10 +40,10 @@ const StyledButton = styled.button`
     `}
 `;
 
-const Button = ({ children, text, className, type, Regular }) => {
+const Button = ({ children, text, className, type, Regular, onClick }) => {
   const iconArrow = <FontAwesomeIcon icon={faArrowRight} />;
   return (
-    <StyledButton $Regular={Regular} className={className} type={type}>
+    <StyledButton $Regular={Regular} className={className} type={type} onClick={onClick}>
       <span className="text-button">{text}</span>
       <span className="icon">{children || iconArrow}</span>
     </StyledButton>
