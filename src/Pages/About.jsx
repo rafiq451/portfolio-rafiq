@@ -142,8 +142,8 @@ const About = () => {
               <h1>Who am I?</h1>
               <h2>I’m Muhammad Rafiq, a visual UX/UI Designer and Web Developer</h2>
               <p className="lh-lg">
-                Kisah seorang pemuda desa yang ingin membahagiakan kedua orang tuanya, lahir dari keluarga sederhana dia bertekad untuk membuat orang tua nya bangga, dengan susah payah dia berjuang dan akhirnya dia menemukan sesuatu yang
-                membuat orang tua nya bangga yaitu menjadi anak soleh.
+                Saya adalah web developer frontend yang berdedikasi dengan pengalaman lebih dari 3 tahun. Ahli dalam membangun antarmuka pengguna responsif dan interaktif menggunakan HTML, CSS, JavaScript, serta framework seperti React.js
+                dan framework CSS lain nya. Berpengalaman dalam optimasi performa website.
               </p>
             </div>
             <section className="biodata">

@@ -1,7 +1,9 @@
 import React from 'react';
 import Herro from '../components/Herro/Herro';
 import styled from 'styled-components';
-import bgGaris from '../assets/garis.svg';
+// import bgGaris from '../assets/garis.svg';
+import bgGaris1 from '../assets/garis1.svg';
+// import bgGaris2 from '../assets/garis.png';
 import About from './About';
 import Resume from './Resume';
 import Certificate from './Certificate';
@@ -35,7 +37,7 @@ const Home = () => {
   return (
     <>
       <Herro />
-      <StyledHome $bgGaris={bgGaris}>
+      <StyledHome $bgGaris={bgGaris1}>
         <section className="bg-garis">
           <div className="content ">
             <About />
