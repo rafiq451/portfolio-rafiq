@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Title from '../components/Title/Title';
 import ContainerComponent from '../components/ContainerComponent/ContainerComponent';
@@ -9,6 +9,7 @@ import Web from '../assets/sertifikat/web.png';
 import Infinite from '../assets/sertifikat/infinite.jpg';
 import CardSertifikat from '../components/Card/CardSertifikat';
 import Button from '../components/Button/Button';
+import Modals from '../components/Modals/Modals';
 
 const StyledCertificate = styled.div`
   padding-top: 5rem;
@@ -24,6 +25,8 @@ const StyledCertificate = styled.div`
 `;
 
 const Certificate = () => {
+  const [lgShow, setLgShow] = useState(false);
+  const [selectedSertifikat, setSelectedSertifikat] = useState(null);
   const datasertifikat = [
     { id: 1, img: Fe, title: 'Front-End Developer' },
     { id: 2, img: Web, title: 'Web Developer ' },
@@ -32,18 +35,24 @@ const Certificate = () => {
     { id: 5, img: Data, title: 'Data Science' },
   ];
 
+  const handleLgShow = (index) => {
+    setSelectedSertifikat(datasertifikat[index]);
+    setLgShow(true);
+  };
+
   return (
     <StyledCertificate>
       <Title title="Certificate" subtitle="My Certificate" />
       <ContainerComponent>
         <section className="content row justify-content-center">
           {datasertifikat.map((data, index) => (
-            <CardSertifikat key={index} title={data.title} img={data.img} className="col-lg-4 col-md-6 col-sm-12" />
+            <CardSertifikat key={index} index={index} setLgShow={handleLgShow} title={data.title} img={data.img} className="col-lg-4 col-md-6 col-sm-12" />
           ))}
         </section>
         <div className="button">
           <Button Regular={true} text="View All Certificate" />
         </div>
+        <section className="modals">{selectedSertifikat && <Modals lgShow={lgShow} setLgShow={setLgShow} img={selectedSertifikat.img} title={selectedSertifikat.title} />}</section>
       </ContainerComponent>
     </StyledCertificate>
   );

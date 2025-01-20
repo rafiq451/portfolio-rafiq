@@ -22,9 +22,9 @@ html {
   --color-text-navbar: #989898;
   --color-card: #1E1E1E;
   --color-hero: #2A2A2A;
-  
   --color-bg: #121212;
 }
+
 
 `;
 

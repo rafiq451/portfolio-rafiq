@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Image } from 'primereact/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
@@ -57,7 +58,7 @@ const StyleCertifikat = styled.div`
     padding: 0;
     margin: 0;
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .card-serti:hover .data-label {
@@ -65,17 +66,20 @@ const StyleCertifikat = styled.div`
   }
 `;
 
-const CardSertifikat = ({ className, title, img }) => {
+const CardSertifikat = ({ setLgShow, className, title, img, index }) => {
   return (
     <StyleCertifikat className={className}>
       <div className="card-serti">
         <picture>
           <source />
+          {/* <Image src={img} alt="gambar serti" preview /> */}
           <img src={img} alt="Gambar serti" />
           <div className="data-label">
             <FontAwesomeIcon icon={faAddressCard} />
             <h3>{title}</h3>
-            <Link to="/sertifikat">Quick View</Link>
+            <Link to="" onClick={() => setLgShow(index)}>
+              Quick View
+            </Link>
           </div>
         </picture>
       </div>

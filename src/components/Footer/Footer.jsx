@@ -1,4 +1,5 @@
 import React from 'react';
+import { GitHub } from 'react-feather';
 import styled from 'styled-components';
 const StyledFooter = styled.div`
   padding: 1rem;
