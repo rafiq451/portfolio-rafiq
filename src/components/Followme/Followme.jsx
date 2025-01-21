@@ -53,7 +53,7 @@ const StyledFollowme = styled.div`
     color: var(--primary-color);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1400px) {
     display: flex;
     left: 2px;
   }
@@ -61,22 +61,20 @@ const StyledFollowme = styled.div`
 
 const StyledTrigger = styled.div`
   position: fixed;
-  bottom: 44%;
-  left: ${({ $visible }) => ($visible ? '30px' : '-35px')};
+  bottom: 42%;
+  left: ${({ $visible }) => ($visible ? '10px' : '-30px')}; /* Sebagian tersembunyi */
   z-index: 101;
-  width: 50px;
-  height: 35px;
+  width: 60px;
+  height: 60px;
   background-color: var(--color-text);
-  border-radius: 6px;
-  display: ${({ $showTrigger }) => ($showTrigger ? 'flex' : 'none')}; /* Hanya tampil setelah scroll */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 50% 100%, 50% 0%); /* Setengah segi enam kanan */
+  display: ${({ $showTrigger }) => ($showTrigger ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 
   &:hover {
-    /* background-color: var(--primary-color); */
     transform: scale(1.05);
   }
 
@@ -90,7 +88,10 @@ const StyledTrigger = styled.div`
   }
 
   @media (min-width: 768px) {
-    display: none; /* Sembunyikan di desktop */
+    bottom: 35%;
+  }
+  @media (min-width: 1400px) {
+    display: none;
   }
 `;
 
