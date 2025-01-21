@@ -87,12 +87,12 @@ const StyledContact = styled.div`
 
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <Title title="Contact" subtitle="Get in touch" />
       <ContainerComponent>
         <section className="content">
           <section className="row  ">
-            <From className="col-12 col-md-6" />
+            <From className="col-12 col-lg-6" />
             <div className="col-12 col-md-11 col-lg-6 ">
               <div className="contact-info ">
                 <div className="title mb-3">
@@ -140,7 +140,7 @@ const Contact = () => {
                       </div>
                       <div className="text mb-3">
                         <h4 className=" m-0 ">Email Me</h4>
-                        <p className=" m-0">ibab7810@gmail.com</p>
+                        <p className=" m-0">rafiqsansa123@gmail.com</p>
                       </div>
                     </div>
                   </section>

@@ -375,6 +375,8 @@ const NavbarComponent = () => {
     }
   };
 
+  // untuk tag link di navbar itu sementara diganti memakai tag anchor supaya bisa di klik
+
   return (
     <Styledheader>
       <header className="header">
@@ -400,41 +402,41 @@ const NavbarComponent = () => {
                 </Link>
               </li>
               <li className="menu-item">
-                <Link to="#" className="a" onClick={() => setIsMenuOpen(false)}>
+                <a href="#resume" className="a" onClick={() => setIsMenuOpen(false)}>
                   Resume
-                </Link>
+                </a>
               </li>
               <li className="menu-item">
-                <Link className="a" onClick={() => setIsMenuOpen(false)} to="/berita">
-                  Certivicate
-                </Link>
+                <a className="a" onClick={() => setIsMenuOpen(false)} href="#certificate">
+                  Certificate
+                </a>
               </li>
               <li className="menu-item">
-                <Link className="a" onClick={() => setIsMenuOpen(false)} to="/usaha">
+                <a className="a" onClick={() => setIsMenuOpen(false)} href="#service">
                   Service
-                </Link>
+                </a>
               </li>
               <li className="menu-item">
-                <Link className="a" onClick={() => setIsMenuOpen(false)} to="/kontak">
+                <a className="a" onClick={() => setIsMenuOpen(false)} href="#portfolio">
                   Portfolio
-                </Link>
+                </a>
               </li>
               <li className="menu-item">
-                <Link className="a" onClick={() => setIsMenuOpen(false)} to="/kontak">
+                <a className="a" onClick={() => setIsMenuOpen(false)} href="#blogs">
                   Blogs
-                </Link>
+                </a>
               </li>
               <div className="mt-3">
-                <NavLink target="_blank" aria-current="page" to="/" className="daftar">
+                <a target="_blank" aria-current="page" href="#contact" className="daftar">
                   Contact
-                </NavLink>
+                </a>
               </div>
             </ul>
           </nav>
           <div className="header__right">
-            <NavLink aria-current="page" target="_blank" to="/" className="daftar">
+            <a aria-current="page" href="#contact" className="daftar">
               Contact
-            </NavLink>
+            </a>
             <span type="button" className="open_menu_btn" aria-label="Open menu" onClick={toggleMenu}>
               <span className="line line1"></span>
               <span className="line line2"></span>

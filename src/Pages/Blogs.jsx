@@ -59,7 +59,7 @@ const Blogs = () => {
 
   const dataTerbaru = dataBlogs.slice(0, 3);
   return (
-    <StyledBlogs>
+    <StyledBlogs id="blogs">
       <Title title="Blogs" subtitle="My Blogs" />
       <ContainerComponent>
         <section className="content">

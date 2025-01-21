@@ -139,7 +139,7 @@ const Hero = () => {
           <section className="info-region">
             <div className="info-item">
               <h4>Email</h4>
-              <span>ibab7810@gmail.com</span>
+              <span>rafiqsansa123@gmail.com</span>
             </div>
             <div className="info-item">
               <h4>Phone</h4>

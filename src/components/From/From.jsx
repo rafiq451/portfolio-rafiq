@@ -5,15 +5,16 @@ const StyledFrom = styled.div`
   /* Form */
 
   .form-control {
+    color: #fff;
     background-color: var(--color-card);
     border: none;
-    position: relative; /* Pastikan ini ada */
-    padding: 0.5rem 1rem; /* Padding yang benar */
+    position: relative;
+    padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--color-text-navbar);
   }
   .form-control::placeholder {
-    color: var(--color-text-navbar); /* Ganti dengan warna yang diinginkan */
+    color: var(--color-text-navbar);
     font-size: 14px;
   }
 
@@ -37,11 +38,11 @@ const From = ({ className }) => {
           <h3>Message Me</h3>
         </div>
         <form>
-          <div className="row">
-            <div className="col">
+          <div className="row ">
+            <div className="col-12 col-md-6 col-lg-6 ">
               <input type="text" className="form-control" placeholder="Name" required />
             </div>
-            <div className="col">
+            <div className="col-12 col-md-6 col-lg-6 ">
               <input type="email" className="form-control" placeholder="Email" required />
             </div>
           </div>

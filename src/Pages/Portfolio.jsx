@@ -101,7 +101,7 @@ const Portfolio = () => {
   }, [activeTab]);
 
   return (
-    <StyledPortfolio>
+    <StyledPortfolio id="portfolio">
       <Title title="Portfolio" subtitle="My Projects" />
       <ContainerComponent>
         <section className="content">

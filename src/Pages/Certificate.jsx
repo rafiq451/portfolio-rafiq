@@ -41,7 +41,7 @@ const Certificate = () => {
   };
 
   return (
-    <StyledCertificate>
+    <StyledCertificate id="certificate">
       <Title title="Certificate" subtitle="My Certificate" />
       <ContainerComponent>
         <section className="content row justify-content-center">

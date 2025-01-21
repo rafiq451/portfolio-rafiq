@@ -31,6 +31,7 @@ const StyledTitle = styled.div`
   @media (max-width: 992px) {
     .resume-title {
       margin-left: 1.5rem;
+      overflow: hidden;
     }
   }
 

@@ -74,10 +74,10 @@ const Resume = () => {
   const experiance = dataresume.filter((item) => item.kategori === 'Experience');
 
   return (
-    <StyledResume>
+    <StyledResume id="resume">
       <Title title="Resume" subtitle="My Resume" />
       <ContainerComponent>
-        <section className="content row ">
+        <section className="content row">
           <div className="resume-education col">
             <h2>Education</h2>
             <section className="resume-education-item d-flex flex-column">

@@ -163,7 +163,7 @@ const Service = () => {
   ];
 
   return (
-    <StyledService>
+    <StyledService id="service">
       <Title title="Service" subtitle="What I Do" />
       <ContainerComponent>
         <section className="content">

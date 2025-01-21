@@ -53,6 +53,12 @@ const StyledFollowme = styled.div`
     color: var(--primary-color);
   }
 
+  @media (min-width: 1280px) {
+    display: ${({ $blok }) => ($blok ? 'flex' : 'none')};
+    left: ${({ $visible }) => ($visible ? '2px' : '-4px')};
+    /* background-color: transparent; */
+  }
+
   @media (min-width: 1400px) {
     display: flex;
     left: 2px;
@@ -61,7 +67,7 @@ const StyledFollowme = styled.div`
 
 const StyledTrigger = styled.div`
   position: fixed;
-  bottom: 42%;
+  bottom: 40.5%;
   left: ${({ $visible }) => ($visible ? '10px' : '-30px')}; /* Sebagian tersembunyi */
   z-index: 101;
   width: 60px;
@@ -88,9 +94,9 @@ const StyledTrigger = styled.div`
   }
 
   @media (min-width: 768px) {
-    bottom: 35%;
+    bottom: 34.5%;
   }
-  @media (min-width: 1400px) {
+  @media (min-width: 1280px) {
     display: none;
   }
 `;
@@ -119,13 +125,12 @@ const Followme = () => {
 
   return (
     <>
-      {/* Tombol trigger */}
-      <StyledTrigger $visible={isVisible} $showTrigger={showTrigger} onClick={handleToggle}>
-        <span>{isVisible ? '❮' : '❯'}</span>
-      </StyledTrigger>
-
       {/* Menu utama */}
       <StyledFollowme $visible={isVisible} $blok={isBlok}>
+        {/* Tombol trigger */}
+        <StyledTrigger $visible={isVisible} $showTrigger={showTrigger} onClick={handleToggle}>
+          <span>{isVisible ? '❮' : '❯'}</span>
+        </StyledTrigger>
         <div className="vertical-line"></div>
         <section className="title">
           <h5>Follow Me</h5>
