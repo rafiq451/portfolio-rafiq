@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
 
 // Perbaikan nama komponen dari StyledHerro menjadi StyledHero
-const StyledHero = styled.div`
+const StyledHero = styled.section`
   color: var(--color-normal);
   /* margin-top: -5rem; */
   .bg_hero {
@@ -120,7 +120,7 @@ const StyledHero = styled.div`
 
 const Hero = () => {
   return (
-    <StyledHero $bgImg={bghero}>
+    <StyledHero id="home" $bgImg={bghero}>
       <section className="bg_hero">
         <div className="container">
           <div className="content">

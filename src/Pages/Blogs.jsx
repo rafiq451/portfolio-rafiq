@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from '../components/Title/Title';
 import ContainerComponent from '../components/ContainerComponent/ContainerComponent';
-import Gambar from '../assets/about/rafiq.jpeg';
+import senja from '../assets/blogs/senja.jpg';
+import cofee from '../assets/blogs/cofee.jpg';
+import coding from '../assets/blogs/coding.jpg';
 import CardBlog from '../components/Card/CardBlog';
 import Button from '../components/Button/Button';
 
@@ -30,30 +32,23 @@ const Blogs = () => {
     {
       id: 1,
       title: 'Senja adalah hadiah semata',
-      img: Gambar,
+      img: senja,
       date: '21 Januari 2023',
-      deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+      deskripsi: 'Senja mengajarkan kita bahwa keindahan selalu hadir, bahkan di penghujung hari. Tak perlu terburu-buru, nikmati tiap detiknya.',
     },
     {
       id: 2,
       title: 'Menikmati Kopi dengan gaya yang berbeda',
-      img: Gambar,
+      img: cofee,
       date: '10 November 2023',
-      deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+      deskripsi: 'Kopi bukan sekadar minuman, tapi cerita di setiap tegukan. Kadang pahit, kadang manis, tapi selalu meninggalkan kesan.',
     },
     {
       id: 3,
-      title: 'Bulan dan Tanggal si Anu ulang tahunnya',
-      img: Gambar,
+      title: 'Sang Programer',
+      img: coding,
       date: '16 Agustus 2023',
-      deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
-    },
-    {
-      id: 4,
-      title: 'Memahami Bahasa tubuh dengan kesepian',
-      img: Gambar,
-      date: '16 Agustus 2023',
-      deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+      deskripsi: 'Menjadi programmer bukan hanya soal menulis kode, tapi juga tentang memecahkan masalah, berpikir kreatif, dan terus belajar tanpa batas.',
     },
   ];
 

@@ -180,15 +180,15 @@ const Service = () => {
           </div>
           <div className="card-client row">
             <div className="card-client-item col-12 col-lg-4">
-              <h2>13+</h2>
+              <h2>4+</h2>
               <p>Years of Experience</p>
             </div>
             <div className="card-client-item col-12 col-lg-4">
-              <h2>90+</h2>
+              <h2>10+</h2>
               <p>Projects Completed</p>
             </div>
             <div className="card-client-item col-12 col-lg-4">
-              <h2>100+</h2>
+              <h2>10+</h2>
               <p>Clients Worldwide</p>
             </div>
           </div>

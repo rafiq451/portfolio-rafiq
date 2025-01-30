@@ -1,6 +1,7 @@
 import Web from '../assets/portfolio/web.png';
 import Web1 from '../assets/portfolio/web1.png';
 import Web2 from '../assets/portfolio/web2.png';
+import Web3 from '../assets/portfolio/web3.png';
 
 const MenuPortfolio = [
   {
@@ -25,14 +26,14 @@ const MenuPortfolio = [
     image: Web2,
   },
   {
-    id: 6,
+    id: 5,
     title: 'UI/UX',
     category: 'UI/UX',
     description: 'Desain Dashboard Admin',
     image: Web2,
   },
   {
-    id: 5,
+    id: 6,
     title: 'UI/UX',
     category: 'UI/UX',
     description: 'Desain Aplikasi Mobile',
@@ -65,6 +66,13 @@ const MenuPortfolio = [
     category: 'Document',
     description: 'Laporan Penelitian Akademik',
     image: Web1,
+  },
+  {
+    id: 10,
+    title: 'Website',
+    category: 'Website',
+    description: 'website PPDB',
+    image: Web3,
   },
 ];
 

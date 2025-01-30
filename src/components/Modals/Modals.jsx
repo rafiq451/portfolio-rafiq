@@ -28,7 +28,20 @@ const StyledModalHeader = styled(Modal.Header)`
   }
 `;
 
-const Modals = ({ lgShow, setLgShow, title }) => {
+const StyledModalBody = styled(Modal.Body)`
+padding : 0;
+  .image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image img {
+    width: 100%;
+  }
+`;
+
+const Modals = ({ lgShow, setLgShow, title, img }) => {
   return (
     <StyledModal show={lgShow} size="lg" onHide={() => setLgShow(false)} aria-labelledby="example-custom-modal-styling-title">
       <StyledModalHeader>
@@ -37,12 +50,11 @@ const Modals = ({ lgShow, setLgShow, title }) => {
           <FontAwesomeIcon icon={faX} />
         </span>
       </StyledModalHeader>
-      <Modal.Body>
-        <p>
-          Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis
-          doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!
-        </p>
-      </Modal.Body>
+      <StyledModalBody>
+        <div className="image">
+          <img src={img} alt="" />
+        </div>
+      </StyledModalBody>
     </StyledModal>
   );
 };

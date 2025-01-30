@@ -46,6 +46,7 @@ const Styledheader = styled.div`
   .header .menu ul li {
     display: inline-block;
   }
+
   .header .menu ul li a:hover {
     color: var(--primary-color);
   }
@@ -56,6 +57,10 @@ const Styledheader = styled.div`
     color: var(--color-text-navbar);
     font-weight: 500;
     line-height: 1.5;
+
+    &.active {
+      color: var(--primary-color);
+    }
   }
 
   .header .menu ul li:not(:last-child) {
@@ -327,10 +332,42 @@ const Styledheader = styled.div`
 `;
 
 const NavbarComponent = () => {
+  const [activeMenu, setActiveMenu] = useState(''); // Menyimpan menu aktif berdasarkan id atau nama
   const menuRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: 'home', name: 'home' },
+        { id: 'resume', name: 'resume' },
+        { id: 'certificate', name: 'certificate' },
+        { id: 'service', name: 'service' },
+        { id: 'portfolio', name: 'portfolio' },
+        { id: 'blogs', name: 'blogs' },
+      ];
+
+      for (let section of sections) {
+        const element = document.getElementById(section.id);
+        if (!element) continue;
+
+        const rect = element.getBoundingClientRect();
+
+        // Jika bagian atas elemen berada di dalam viewport
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          setActiveMenu(section.name);
+          break; // Stop iterasi agar hanya satu yang aktif
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Jalankan saat pertama kali dimuat
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -397,35 +434,78 @@ const NavbarComponent = () => {
             </div>
             <ul>
               <li className="menu-item">
-                <Link to="#" className="a" onClick={() => setIsMenuOpen(false)}>
+                <a
+                  href="#home"
+                  className={`a ${activeMenu === 'home' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('home');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Home
-                </Link>
+                </a>
               </li>
               <li className="menu-item">
-                <a href="#resume" className="a" onClick={() => setIsMenuOpen(false)}>
+                <a
+                  href="#resume"
+                  className={`a ${activeMenu === 'resume' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('resume');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Resume
                 </a>
               </li>
               <li className="menu-item">
-                <a className="a" onClick={() => setIsMenuOpen(false)} href="#certificate">
+                <a
+                  href="#certificate"
+                  className={`a ${activeMenu === 'certificate' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('certificate');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Certificate
                 </a>
               </li>
               <li className="menu-item">
-                <a className="a" onClick={() => setIsMenuOpen(false)} href="#service">
+                <a
+                  href="#service"
+                  className={`a ${activeMenu === 'service' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('service');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Service
                 </a>
               </li>
               <li className="menu-item">
-                <a className="a" onClick={() => setIsMenuOpen(false)} href="#portfolio">
+                <a
+                  href="#portfolio"
+                  className={`a ${activeMenu === 'portfolio' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('portfolio');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Portfolio
                 </a>
               </li>
               <li className="menu-item">
-                <a className="a" onClick={() => setIsMenuOpen(false)} href="#blogs">
+                <a
+                  href="#blogs"
+                  className={`a ${activeMenu === 'blogs' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveMenu('blogs');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Blogs
                 </a>
               </li>
+
               <div className="mt-3">
                 <a target="_blank" aria-current="page" href="#contact" className="daftar">
                   Contact
