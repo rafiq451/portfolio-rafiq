@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import Title from '../components/Title/Title';
 import ContainerComponent from '../components/ContainerComponent/ContainerComponent';
 import senja from '../assets/blogs/senja.jpg';
 import cofee from '../assets/blogs/cofee.jpg';
 import coding from '../assets/blogs/coding.jpg';
-import CardBlog from '../components/Card/CardBlog';
+// import CardBlog from '../components/Card/CardBlog';
 import Button from '../components/Button/Button';
+
+const CardBlog = React.lazy(() => import('../components/Card/CardBlog'));
 
 const StyledBlogs = styled.div`
   padding-top: 5rem;
@@ -59,9 +61,11 @@ const Blogs = () => {
       <ContainerComponent>
         <section className="content">
           <section className="row justify-content-center">
-            {dataTerbaru.map((data, index) => (
-              <CardBlog key={index} {...data} className="sm-col-12 col-md-6 col-lg-4 mb-2 " />
-            ))}
+            <Suspense fallback={<div>Loading...</div>}>
+              {dataTerbaru.map((data, index) => (
+                <CardBlog key={index} {...data} className="sm-col-12 col-md-6 col-lg-4 mb-2 " />
+              ))}
+            </Suspense>
           </section>
           <div className="button d-flex justify-content-center">
             <Button Regular={true} text="View All Blogs" />
