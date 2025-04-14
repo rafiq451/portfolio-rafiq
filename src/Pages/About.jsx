@@ -5,6 +5,7 @@ import ContainerComponent from '../components/ContainerComponent/ContainerCompon
 import Button from '../components/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
+import { Helmet } from 'react-helmet';
 
 const StyledAbout = styled.div`
   padding-top: 2rem;

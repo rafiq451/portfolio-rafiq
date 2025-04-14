@@ -12,6 +12,7 @@ import Portfolio from './Portfolio';
 import Testimoni from './Testimoni';
 import Blogs from './Blogs';
 import Contact from './Contact';
+import { Helmet } from 'react-helmet';
 
 const StyledHome = styled.div`
   background-color: #121212;
