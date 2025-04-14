@@ -141,6 +141,16 @@ const About = () => {
   };
   return (
     <StyledAbout>
+      <Helmet>
+        <title>about Rafiq</title>
+        <meta
+          name="description"
+          content="Saya adalah web developer frontend yang berdedikasi dengan pengalaman lebih dari 3 tahun. Ahli dalam membangun antarmuka pengguna responsif dan interaktif menggunakan HTML, CSS, JavaScript, serta framework seperti React.js dan framework CSS lain nya. Berpengalaman dalam optimasi performa website."
+        />
+        <meta name="keywords" content="Portfolio Rafiq, Frontend Developer, React.js Developer, UI UX Designer, jasa pembuatan website, web developer Indonesia" />
+        <link rel="canonical" href="https://portfolio-rafiq.vercel.app/" />
+      </Helmet>
+
       <ContainerComponent>
         <section className="row about gap-2">
           <div className="col-lg-5 about-img">

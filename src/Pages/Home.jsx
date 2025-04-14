@@ -35,6 +35,20 @@ const StyledHome = styled.div`
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Portfolio Rafiq - Frontend Developer | React & UI/UX</title>
+        <meta name="description" content="Portfolio Muhammad Rafiq, Frontend Developer React.js dan UI/UX Designer. Website modern, cepat, dan interaktif untuk kebutuhan digital Anda." />
+        <meta name="keywords" content="Portfolio Rafiq, Frontend Developer, React.js Developer, UI UX Designer, jasa pembuatan website, web developer Indonesia" />
+        <link rel="canonical" href="https://portfolio-rafiq.vercel.app/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Portfolio Rafiq - Frontend Developer" />
+        <meta property="og:description" content="Lihat hasil karya dan layanan jasa pembuatan website modern oleh Muhammad Rafiq." />
+        <meta property="og:image" content="https://portfolio-rafiq.vercel.app/images/preview.jpg" />
+        <meta property="og:url" content="https://portfolio-rafiq.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <Herro />
       <StyledHome $bgGaris={bgGaris}>
         <section className="bg-garis">
