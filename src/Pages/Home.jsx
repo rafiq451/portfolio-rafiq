@@ -2,8 +2,8 @@ import React from 'react';
 import Herro from '../components/Herro/Herro';
 import styled from 'styled-components';
 import bgGaris from '../assets/garis.png';
-
 import About from './About';
+import Benner from './Benner';
 import Resume from './Resume';
 import Certificate from './Certificate';
 import Skill from './Skill';
@@ -55,6 +55,7 @@ const Home = () => {
         <section className="bg-garis">
           <div className="content ">
             <About />
+            <Benner />
             <Resume />
             <Certificate />
             <Skill />

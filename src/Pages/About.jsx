@@ -143,7 +143,7 @@ const About = () => {
   return (
     <StyledAbout>
       <Helmet>
-        <title>about Rafiq</title>
+        <title>portfolio Rafiq</title>
         <meta
           name="description"
           content="Saya adalah web developer frontend yang berdedikasi dengan pengalaman lebih dari 3 tahun. Ahli dalam membangun antarmuka pengguna responsif dan interaktif menggunakan HTML, CSS, JavaScript, serta framework seperti React.js dan framework CSS lain nya. Berpengalaman dalam optimasi performa website."
