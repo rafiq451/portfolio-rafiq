@@ -5,7 +5,7 @@ import 'react-multi-carousel/lib/styles.css'; // Import styles untuk carousel
 import Title from '../components/Title/Title';
 import ContainerComponent from '../components/ContainerComponent/ContainerComponent';
 import TestimoniCrousel from '../components/Crousel/TestimoniCrousel';
-import gambarRafiq from '../assets/about/rafiq.jpeg';
+import gambarRafiq from '../assets/about/rafiq.png';
 
 const StyledTestimoniCarousel = styled.div`
   padding-top: 5rem;
