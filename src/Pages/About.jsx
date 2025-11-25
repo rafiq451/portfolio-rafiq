@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import gambarRafiq from '../assets/about/rafiq.jpeg';
+import gambarRafiq from '../assets/about/rafiq.png';
 import ContainerComponent from '../components/ContainerComponent/ContainerComponent';
 import Button from '../components/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
